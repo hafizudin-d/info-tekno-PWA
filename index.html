@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>INFO TEKNOLOGI</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#5550FA"/>
+
+</head>
+<body>
+  <!-- Navigasi -->
+  <header>
+    <nav class="transparent" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo font-art" id="logo-container">IT</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+        
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <div class="container white-text">
+      <br><br>
+      <h1 class="font-art">INFO TEKNOLOGI</h1>
+      <p class="font-size-art">Mari simak perkembangan teknologi saat ini, <br> 
+        agar kamu selalu update tentang wawasan teknologi Meliputi <br>
+         Gadget Terbaru, Games, Apps, Smartphone, dll</p> <br>
+      <a onclick="M.toast({html: 'Selamat Datang di Info Teknologi'})" class="waves-effect waves-light btn-large blue darken-4 hide-on-med-and-down" ><i class="material-icons left">article</i>Info Teknologi</a>
+    </div>
+  </header>
+  <!-- Akhir Navigasi -->
+  <div  id="body-content"></div>
+
+  <footer  class="page-footer blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">INFO TEKNOLOGI</h5>
+          <p class="grey-text text-lighten-4">Bila informasi di Info Teknologi bermanfaat, Jangan lupa bagikan Info Teknologi ini kepada teman-teman mu agar semua orang selalu update mengenai teknologi. Terimakasih</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Join Our Social Media</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!"><img class="icon-size" src="images/icon-fb.png" alt="">  INFO TEKNOLOGI</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><img class="icon-size" src="images/icon-ig.png" alt="">  @infoteknologi_09</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><img class="icon-size" src="images/icon-tw.png" alt="">  @infoteknologi_09</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+      INFO TEKNOLOGI © 2020 Copyright 
+      <a class="grey-text text-lighten-4 right" href="#!">INFO TEKNOLOGI</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // REGISTER SERVICE WORKER
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then( () => {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch( () => {
+            console.log("Pendaftaran ServiceWorker gagal");
+          })
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>
+</body>
+</html>
